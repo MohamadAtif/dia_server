@@ -13,7 +13,7 @@ productRouter.get("/api/get-all-products", auth, async (req, res) => {
   }
 });
 
-
+//get by category
 productRouter.get("/api/products/", auth, async (req, res) => {
   try {
     const products = await Product.find({ category: req.query.category });
